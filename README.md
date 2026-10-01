@@ -23,11 +23,11 @@ EnvKit is signed with a Developer ID but not yet notarized, so Gatekeeper may bl
 first launch. Any one of these works:
 
 ```bash
-brew install --cask --no-quarantine env-kit/tap/envkit   # skip the quarantine flag at install time
-xattr -dr com.apple.quarantine /Applications/EnvKit.app    # or clear it afterwards
+xattr -dr com.apple.quarantine /Applications/EnvKit.app
 ```
 
-or right-click `EnvKit.app` → **Open** once.
+or, after the first blocked launch, System Settings → Privacy & Security → **Open Anyway**
+(macOS 15 removed the right-click → Open override).
 
 ## Updating
 

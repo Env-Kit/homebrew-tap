@@ -38,12 +38,11 @@ cask "envkit" do
 
   caveats <<~EOS
     EnvKit is code-signed but not yet notarized by Apple, so Gatekeeper may
-    block the first launch. Either install with
-
-      brew install --cask --no-quarantine envkit
-
-    or right-click EnvKit.app and choose Open once, or run
+    block the first launch. Run
 
       xattr -dr com.apple.quarantine /Applications/EnvKit.app
+
+    or, after the first blocked launch, allow it in System Settings →
+    Privacy & Security → Open Anyway.
   EOS
 end
